@@ -4,10 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Swiss Knife</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+        }
+        .tool-tile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 150px;
+            cursor: pointer;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .tool-tile:hover {
+            transform: scale(1.05);
+            background-color: #e9ecef;
+        }
+        .tool-tile .icon {
+            font-size: 2rem;
+            color: #007bff;
+        }
+        .tool-tile .name {
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        .tool-tile .description {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px;
+            font-size: 0.9rem;
+            transition: bottom 0.3s ease;
+        }
+        .tool-tile:hover .description {
+            bottom: 0;
+        }
+        header {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        header h1 i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Developer Swiss Knife</h1>
-    <p>Your one-stop solution for developer tools and resources.</p>
+    <header>
+        <h1><i class="fas fa-tools"></i> Developer Swiss Knife</h1>
+    </header>
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Tool 1 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="tool-tile" onclick="window.open('https://example.com/tool1', '_blank')">
+                    <div class="icon"><i class="fas fa-code"></i></div>
+                    <div class="name">Formatter</div>
+                    <div class="description">Format and beautify your code with ease.</div>
+                </div>
+            </div>
+            <!-- Tool 2 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="tool-tile" onclick="window.open('https://example.com/tool2', '_blank')">
+                    <div class="icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="name">Graph Builder</div>
+                    <div class="description">Generate beautiful graphs from your data.</div>
+                </div>
+            </div>
+            <!-- Tool 3 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="tool-tile" onclick="window.open('https://example.com/tool3', '_blank')">
+                    <div class="icon"><i class="fas fa-database"></i></div>
+                    <div class="name">CSV Merger</div>
+                    <div class="description">Merge and manipulate CSV files effortlessly.</div>
+                </div>
+            </div>
+            <!-- Tool 4 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="tool-tile" onclick="window.open('https://example.com/tool4', '_blank')">
+                    <div class="icon"><i class="fas fa-search"></i></div>
+                    <div class="name">Log Viewer</div>
+                    <div class="description">Parse and browse application logs with ease.</div>
+                </div>
+            </div>
+            <!-- Tool 5 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="tool-tile" onclick="window.open('https://example.com/tool5', '_blank')">
+                    <div class="icon"><i class="fas fa-table"></i></div>
+                    <div class="name">Table Generator</div>
+                    <div class="description">Create tables from structured data.</div>
+                </div>
+            </div>
+            <!-- Tool 6 -->
+            <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="tool-tile" onclick="window.open('https://example.com/tool6', '_blank')">
+                    <div class="icon"><i class="fas fa-cogs"></i></div>
+                    <div class="name">Config Manager</div>
+                    <div class="description">Manage application configurations effortlessly.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Developer Swiss Knife. Built with <i class="fas fa-heart text-danger"></i> by <a href="#">Shashank Singh</a>.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
